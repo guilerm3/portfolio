@@ -1,11 +1,12 @@
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 import { Button } from "./components/Button"
 import projeto1 from "./assets/projeto1.png"
 import projeto2 from "./assets/projeto2.png"
 import projeto3 from "./assets/projeto3.png"
 import projeto4 from "./assets/projeto4.png"
 import wppico from "./assets/wppico.png"
-
+import timeline from "./assets/timeline.svg"
 
 function App() {
 
@@ -55,9 +56,22 @@ function App() {
         </div>
       </div>
 
-      <div className="about">
-
+      <div className="time-l">
+        <div className="time-p">
+          <div>2021</div>
+          <div>2022</div>
+          <div>2023</div>
+          <div>2024</div>
+        </div>
+        <img src={timeline} className="time-img" />
       </div>
+      <div className="time-q">
+          <div className="time-d">Formando em sistemas de informação pela faculdade Doctum de Ipatinga MG</div>
+          <div className="time-d">Início da especialização de desenvolvimento front end</div>
+          <div className="time-d">Ano do primeiro projeto de larga escala e primeira venda de serviço freelancer</div>
+          <div className="time-d">Premiação lean six-sigma em redução de custos operacionais pela empresa Brinks</div>
+        </div>
+      <Footer/>
     </>
   )
 }

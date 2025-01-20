@@ -68,7 +68,6 @@ export const GlobalStyle = createGlobalStyle`
         width: 14rem;
         display:flex;
         align-items: center;
-        color: #0F1624;
         
         &:hover{
             transform: scale(1.1);
@@ -76,6 +75,27 @@ export const GlobalStyle = createGlobalStyle`
     }
     .bt > img {
         margin-left: 1rem;
+    }
+    a {
+        text-decoration: none;
+    }
+    .time-p {
+        display: flex;
+        justify-content: flex-start;
+        gap: 24.6rem;
+        margin: 10rem 0 0 0;
+    }
+    .time-l {
+        margin: 0 0 0 17rem;
+    }
+    .time-q{
+        display: flex;
+        justify-content: flex-start;
+        gap: 16.5rem;
+        margin-left: 17rem;
+    }
+    .time-d {
+        width: 10rem;
     }
 
 `;
