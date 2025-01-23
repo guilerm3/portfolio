@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import githubico from "../../public/github.svg"
-import linkedinico from "../../public/linkedin.svg"
+import githubico from "/github.svg"
+import linkedinico from "/linkedin.svg"
 
 export const Foooter = styled.footer`
     display: flex;
