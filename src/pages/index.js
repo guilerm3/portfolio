@@ -1,2 +1,2 @@
 export { default as Content } from "./Content";
-export { default as Presentation } from "./Presentation";
+export { default as ParticlesJSComponent } from "./ParticlesJSComponent";

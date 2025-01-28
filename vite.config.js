@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   assetsInclude: ['**/*.xml'],
   plugins: [react()],
+  optimizeDeps: {
+    include: ['particles.js'],
+  },
 })

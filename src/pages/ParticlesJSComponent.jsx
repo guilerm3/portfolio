@@ -1,10 +1,8 @@
-// Importando as dependências necessárias
 import { useEffect } from 'react';
 import styled from 'styled-components';
-import particlesJS from 'particles.js'; // Importando particles.js
-import Stats from 'stats.js'; // Importando stats.js
+import particlesJS from 'particles.js';
+import Stats from 'stats.js';
 
-// Estilos para os componentes
 const ParticlesContainer = styled.div`
   position: absolute;
   width: 100%;
@@ -157,9 +155,8 @@ const ParticlesJSComponent = () => {
       "retina_detect": true
     });
 
-        // Inicializando stats.js
         const stats = new Stats();
-        stats.setMode(0); // 0: fps, 1: ms
+        stats.setMode(0);
         stats.domElement.style.position = 'absolute';
         stats.domElement.style.left = '0px';
         stats.domElement.style.top = '0px';
@@ -167,7 +164,6 @@ const ParticlesJSComponent = () => {
     
         const countParticles = document.querySelector('.js-count-particles');
         
-        // Função de atualização de stats e contagem de partículas
         const update = () => {
           stats.begin();
           stats.end();
@@ -179,7 +175,6 @@ const ParticlesJSComponent = () => {
     
         requestAnimationFrame(update);
     
-        // Limpeza do efeito ao desmontar o componente
         return () => {
           document.body.removeChild(stats.domElement);
         };
