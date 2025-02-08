@@ -8,6 +8,7 @@ export const Foooter = styled.footer`
     gap: 40rem;
     margin: 10rem 0 0 10rem;
     padding-bottom: 2rem;
+    background-color: black;
 `;
 
 export const Icon = styled.img`

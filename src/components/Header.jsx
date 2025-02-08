@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
+    padding: 1rem 1rem 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
     font-weight: 500;
 `;
 

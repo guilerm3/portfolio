@@ -2,16 +2,22 @@ import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
     html{
+        margin:0;
+        padding:0;
         font-family: "Poppins", serif;
-        color: white;  
+        color: white;
+        background-color:black;
     }
     body{
-        background-color: #0F1624;
+        margin:0;
+        padding:0;
     }
     .hero{
         margin: 10rem 0px 30px 12rem;
-        position: relative;
         max-width: 660px;
+        background-color: black;
+        padding: 2rem 2rem 7rem 2rem;
+        border-radius: 30px 0 30px;
     }
     .projects{
         display: grid;
@@ -37,10 +43,13 @@ export const GlobalStyle = createGlobalStyle`
     }
     .project{
         width: 34rem;
-        height: 38rem;
+        height: 35rem;
         border-radius: 30px 0 30px;
-        box-shadow: 0 0 20px white;
-        
+        transition: box-shadow 0.5s ease-in-out;
+        background-color: black;
+        &:hover {
+        box-shadow: 0px 4px 20px rgb(255, 255, 255); /* Aparece a sombra */
+  }
     }
     .project > a > button {
         height: 4rem;
@@ -65,9 +74,13 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 15px;
     }
     .bt{
+        margin: 1.5rem 0 0 0;
+        padding:0.5rem;
         width: 14rem;
         display:flex;
         align-items: center;
+        justify-content: center;
+        font-size:20px;
         
         &:hover{
             transform: scale(1.1);

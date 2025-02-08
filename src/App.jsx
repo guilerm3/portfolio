@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
-import { Content, ParticlesJSComponent } from './pages'
+import { Content, Presentation } from './pages'
 
 function App() {
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ParticlesJSComponent/>} />
+        <Route path="/" element={<Presentation/>} />
         <Route path="/content" element={<Content/>} />
       </Routes>
     </Router>
