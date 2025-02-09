@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom'
 
 export const Div = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
@@ -190,7 +191,7 @@ function Presentation() {
             <div className="glow"></div>
           </div>
         </div>
-        <a href="/content">Saber mais</a>
+        <Link to='/content'>Saber mais</Link>
         <h1>Desenvolvedor Freelancer</h1>
       </body>
     </Div>
