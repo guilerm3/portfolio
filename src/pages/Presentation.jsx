@@ -2,11 +2,15 @@ import styled from "styled-components";
 
 export const Div = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+    
+  html {
+    background-color: black;
+  }
 
   body {
     height: 100vh;
     overflow: hidden;
-    background-color: #000;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +28,24 @@ export const Div = styled.div`
     border-right: 0.1em solid currentColor;
     animation: typing 10s steps(30) 1s infinite, blink 0.75s step-end infinite;
   }
+
+  a {
+    position: absolute;
+    top: 20%;
+    color: green;
+    font-family: "Share Tech Mono", "Cascadia Code", Menlo, Monaco,
+    "Courier New", monospace;
+    font-size:20px;
+    text-decoration: none;
+  }
+
+    a:visited {
+            color: green;
+        }
+
+    a:active {
+            color: green;
+        }
 
   @keyframes typing {
     0% {
@@ -168,6 +190,7 @@ function Presentation() {
             <div className="glow"></div>
           </div>
         </div>
+        <a href="/content">Saber mais</a>
         <h1>Desenvolvedor Freelancer</h1>
       </body>
     </Div>
