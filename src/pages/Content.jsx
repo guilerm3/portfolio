@@ -37,67 +37,56 @@ export const Div = styled.div`
 
 function Content() {
   useEffect(() => {
-    // Get the canvas by id and set the canvas context
     const c = document.getElementById("c");
     const ctx = c.getContext("2d");
 
-    // Making the canvas full screen
     c.height = document.documentElement.scrollHeight;
     c.width = document.documentElement.scrollWidth;
 
-    // Check if the canvas width is valid before proceeding
     if (isNaN(c.width) || c.width <= 0) {
       console.error("Canvas width is invalid!");
       return;
     }
 
-    // Chinese characters (you can use any characters here)
     let matrix =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
-    matrix = matrix.split(""); // Convert string into array of characters
+    matrix = matrix.split("");
 
     const font_size = 10;
-    const columns = Math.floor(c.width / font_size); // Number of columns for the rain
+    const columns = Math.floor(c.width / font_size);
 
-    // Ensure the columns are valid
     if (columns <= 0) {
       console.error("Invalid number of columns:", columns);
       return;
     }
 
-    const drops = Array(columns).fill(1); // Initialize the drops
+    const drops = Array(columns).fill(1);
 
-    // Drawing function to simulate the Matrix effect
     function draw() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.2)"; // Transparent BG to show trail
+      ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
       ctx.fillRect(0, 0, c.width, c.height);
 
-      ctx.fillStyle = "green"; // Green color for the text
+      ctx.fillStyle = "green";
       ctx.font = font_size + "px arial";
 
-      // Loop through the drops and draw random characters
       for (let i = 0; i < drops.length; i++) {
         const text = matrix[Math.floor(Math.random() * matrix.length)];
         ctx.fillText(text, i * font_size, drops[i] * font_size);
 
-        // Reset drop to top with a random factor to make it scatter
         if (drops[i] * font_size > c.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
 
-        // Increment the drop position
         drops[i]++;
       }
     }
 
-    // Set interval for the draw function
     const interval = setInterval(draw, 35);
 
-    // Cleanup the interval on component unmount
     return () => {
       clearInterval(interval);
     };
-  }, []); // Empty array to run the effect only once when the component mounts
+  }, []);
 
   return (
     <Div>
