@@ -17,6 +17,13 @@ export const ItemsContainer = styled.div`
 
 export const Item = styled.div`
     margin: 0 1.25rem;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    padding:10px;
+
+    &:hover {
+        background-color: rgba(136, 136, 136, 0.23); /* Fundo levemente cinza */
+    }
 `;
 
 export const RrightDiv = styled.div`
@@ -26,13 +33,27 @@ export const RrightDiv = styled.div`
     width: 5rem;
 `;
 
+const handleScroll1 = () => {
+    const targetElement = document.getElementById('projects');
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  };
+  const handleScroll2 = () => {
+    const targetElement = document.getElementById('about');
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  };
+  const handleScroll3 = () => {
+    const targetElement = document.getElementById('technologies');
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
 function Header() {
     return (
       <Div>
         <ItemsContainer>
-            <Item>Projetos</Item>
-            <Item>Tecnologias</Item>
-            <Item>Sobre mim</Item>
+            <Item onClick={handleScroll1}>Projetos</Item>
+            <Item onClick={handleScroll3}>Tecnologias</Item>
+            <Item onClick={handleScroll2}>Sobre mim</Item>
         </ItemsContainer>
         <RrightDiv>
             <a href="https://github.com/guilerm3" target="_blank">

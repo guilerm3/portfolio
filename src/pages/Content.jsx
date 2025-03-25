@@ -19,19 +19,19 @@ export const Div = styled.div`
     margin: 0;
     padding: 0;
   }
-
-  body {
-    background: black;
-  }
   canvas {
     display: block;
     position: absolute;
     z-index: 1;
   }
 
-  .hero, .projects, .time-l, .time-q {
+  .hero, .projects, .time-l, .time-q, .title {
     position: relative;
     z-index: 2;
+  }
+
+  .title{
+    
   }
 `;
 
@@ -81,16 +81,16 @@ function Content() {
       }
     }
 
-    const interval = setInterval(draw, 35);
+    const interval = setInterval(draw, 25);
 
     return () => {
       clearInterval(interval);
     };
   }, []);
+  
 
   return (
     <Div>
-      <body>
       <Header />
         <canvas id="c"></canvas>
         <div className="hero">
@@ -110,8 +110,11 @@ function Content() {
             </Button>
           </a>
         </div>
+        
+        <h1 className="title">PROJETOS</h1>
 
-        <div className="projects">
+        <div id="projects" className="projects">
+          
           <div className="project">
             <img src={projeto1} alt="" />
             <h1>Dashboard de vendas completo</h1>
@@ -173,7 +176,7 @@ function Content() {
           </div>
         </div>
 
-        <div className="time-l">
+        <div id="about"className="time-l">
           <div className="time-p">
             <div>2021</div>
             <div>2022</div>
@@ -199,7 +202,6 @@ function Content() {
             empresa Brinks
           </div>
         </div>
-      </body>
       <Footer />
     </Div>
   );
