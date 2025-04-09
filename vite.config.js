@@ -8,4 +8,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ['particles.js'],
   },
+  server: {
+    allowedHosts: true
+  }
 })
